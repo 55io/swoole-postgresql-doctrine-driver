@@ -1,12 +1,12 @@
 {
-    "name": "leocavalcante/swoole-postgresql-doctrine-driver",
+    "name": "55io/swoole-postgresql-doctrine-driver",
     "description": "A Doctrine DBAL Driver implementation on top of Swoole Coroutine PostgreSQL extension",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "leocavalcante",
-            "email": "lc@leocavalcante.com"
+            "name": "55io",
+            "email": "55io@mail.ru"
         }
     ],
     "minimum-stability": "stable",

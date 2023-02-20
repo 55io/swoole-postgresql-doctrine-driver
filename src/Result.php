@@ -19,28 +19,28 @@ class Result implements ResultInterface
 
     public function fetchNumeric()
     {
-        return $this->connection->fetchArray($this->result);
+        return $this->result->fetchArray();
     }
 
     public function fetchAssociative()
     {
-        return $this->connection->fetchAssoc($this->result);
+        return $this->result->fetchAssoc();
     }
 
     public function fetchOne()
     {
-        $result = $this->connection->fetchRow($this->result);
+        $result = $this->result->fetchRow($this->result);
         return $result ? $result[0] : false;
     }
 
     public function fetchAllNumeric(): array
     {
-        return $this->connection->fetchAll($this->result, SW_PGSQL_NUM) ?: [];
+        return $this->result->fetchAll($this->result, SW_PGSQL_NUM) ?: [];
     }
 
     public function fetchAllAssociative(): array
     {
-        return $this->connection->fetchAll($this->result, SW_PGSQL_ASSOC) ?: [];
+        return $this->result->fetchAll($this->result, SW_PGSQL_ASSOC) ?: [];
     }
 
     public function fetchFirstColumn(): array
@@ -50,12 +50,12 @@ class Result implements ResultInterface
 
     public function rowCount(): int
     {
-        return $this->connection->numRows($this->result);
+        return $this->result->numRows();
     }
 
     public function columnCount(): int
     {
-        return $this->connection->fieldCount($this->result);
+        return $this->result->fieldCount();
     }
 
     public function free(): void

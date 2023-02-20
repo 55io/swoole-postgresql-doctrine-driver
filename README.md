@@ -7,7 +7,7 @@ A `Doctrine\DBAL\Driver` implementation on top of `Swoole\Coroutine\PostgreSQL`.
 ### Install
 
 ```shell
-composer require leocavalcante/swoole-postgresql-doctrine-driver
+composer require 55io/swoole-postgresql-doctrine-driver
 ```
 
 ### Usage
